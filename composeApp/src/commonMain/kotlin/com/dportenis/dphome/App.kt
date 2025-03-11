@@ -3,6 +3,7 @@ package com.dportenis.dphome
 import WifiOff
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
@@ -19,6 +20,7 @@ import androidx.compose.material3.ModalBottomSheet
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.SheetState
 import androidx.compose.material3.Text
+import androidx.compose.material3.TextButton
 import androidx.compose.material3.rememberModalBottomSheetState
 import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
@@ -131,21 +133,39 @@ fun BottomSheet(
                 fontWeight = FontWeight.Bold,
                 textAlign = TextAlign.Center,
             )
-            Button(
+            Row(
                 modifier = Modifier.align(Alignment.End),
-                colors = ButtonDefaults.buttonColors(
-                    containerColor = Color.DarkGray
-                ),
-                onClick = {
-                    scope.launch { sheetState.hide() }.invokeOnCompletion {
-                        if (!sheetState.isVisible) {
-                            onDismiss()
+            ) {
+                TextButton(
+                    colors = ButtonDefaults.buttonColors(
+                        contentColor = Color.DarkGray,
+                        containerColor = Color.Transparent
+                    ),
+                    onClick = {
+                        scope.launch { sheetState.hide() }.invokeOnCompletion {
+                            if (!sheetState.isVisible) {
+                                onDismiss()
+                            }
                         }
                     }
-                    openMaps()
+                ) {
+                    Text("Cancelar")
                 }
-            ) {
-                Text("Buscar")
+                Button(
+                    colors = ButtonDefaults.buttonColors(
+                        containerColor = Color.DarkGray
+                    ),
+                    onClick = {
+                        scope.launch { sheetState.hide() }.invokeOnCompletion {
+                            if (!sheetState.isVisible) {
+                                onDismiss()
+                            }
+                        }
+                        openMaps()
+                    }
+                ) {
+                    Text("Buscar")
+                }
             }
         }
     }

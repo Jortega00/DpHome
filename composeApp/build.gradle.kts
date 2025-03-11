@@ -44,15 +44,6 @@ kotlin {
             implementation(libs.androidx.lifecycle.viewmodel)
             implementation(libs.androidx.lifecycle.runtime.compose)
 
-            // Para web scraping
-            implementation(libs.jsoup)
-
-            // Para cargar imágenes
-            implementation(libs.coil.compose)
-
-            // Para serialización
-            implementation(libs.kotlinx.serialization.json)
-
             //WebView
             api(libs.compose.webview.multiplatform)
 

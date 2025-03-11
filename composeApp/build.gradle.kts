@@ -47,6 +47,12 @@ kotlin {
             //WebView
             api(libs.compose.webview.multiplatform)
 
+            //Konnectivity
+            implementation(libs.konnectivity)
+
+            //Permissions
+            implementation(libs.permissions.compose)
+
             implementation(libs.navigation.compose)
             implementation(libs.ui.graphics)
         }

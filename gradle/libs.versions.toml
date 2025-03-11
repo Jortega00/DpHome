@@ -14,12 +14,15 @@ androidx-test-junit = "1.2.1"
 compose-multiplatform = "1.7.0"
 composeWebviewMultiplatform = "1.9.40"
 junit = "4.13.2"
+konnectivity = "0.1-alpha01"
 kotlin = "2.1.0"
 navigationCompose = "2.7.0-alpha07"
+permissionsCompose = "0.19.1"
 uiGraphics = "1.5.0"
 
 [libraries]
 compose-webview-multiplatform = { module = "io.github.kevinnzou:compose-webview-multiplatform", version.ref = "composeWebviewMultiplatform" }
+konnectivity = { module = "com.plusmobileapps:konnectivity", version.ref = "konnectivity" }
 kotlin-test = { module = "org.jetbrains.kotlin:kotlin-test", version.ref = "kotlin" }
 kotlin-test-junit = { module = "org.jetbrains.kotlin:kotlin-test-junit", version.ref = "kotlin" }
 junit = { group = "junit", name = "junit", version.ref = "junit" }
@@ -34,6 +37,7 @@ androidx-lifecycle-viewmodel = { group = "org.jetbrains.androidx.lifecycle", nam
 androidx-lifecycle-runtime-compose = { group = "org.jetbrains.androidx.lifecycle", name = "lifecycle-runtime-compose", version.ref = "androidx-lifecycle" }
 
 navigation-compose = { module = "org.jetbrains.androidx.navigation:navigation-compose", version.ref = "navigationCompose" }
+permissions-compose = { module = "dev.icerock.moko:permissions-compose", version.ref = "permissionsCompose" }
 ui-graphics = { module = "org.jetbrains.compose.ui:ui-graphics", version.ref = "uiGraphics" }
 
 [plugins]

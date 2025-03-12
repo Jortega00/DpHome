@@ -131,7 +131,6 @@ fun BottomSheet(
                 text = "Buscar tiendas cerca de mi",
                 fontSize = MaterialTheme.typography.titleMedium.fontSize,
                 fontWeight = FontWeight.Bold,
-                textAlign = TextAlign.Center,
             )
             Row(
                 modifier = Modifier.align(Alignment.End),
